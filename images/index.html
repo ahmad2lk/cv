@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ahmad Alkhalaf </title>
+    <meta name="description" content="Lebenslauf von Ahmad Alkhalaf – Wirtschaftsinformatiker & Mobile App Entwickler." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1F2D3D;
+            --primary-light: #2C3E50;
+            --accent-blue: #3498db;
+            --accent-green: #2ecc71;
+            --bg-light: #f8f9fa;
+            --text-dark: #2c3f55;
+            --text-light: #5f7a94;
+            --border-radius-card: 18px;
+            --border-radius-small: 8px;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition-speed: 0.3s ease-in-out;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.7; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+        a { color: var(--accent-blue); text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: var(--accent-green); }
+
+
+        header#hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+            color: white;
+            padding: 4rem 2rem;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .hero-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .profile-pic {
+            width: 160px; height: 160px;
+            border-radius: 50%; border: 6px solid #fff;
+            object-fit: cover;
+            box-shadow: var(--shadow-light);
+        }
+        .hero-left h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
+        .hero-left p { font-size: 1.2rem; color: #d0dce6; }
+
+        .hero-right {
+            flex: 1;
+            min-width: 280px;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-card);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        nav {
+            position: sticky; top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(60px);
+            padding: 0.8rem 0;
+            z-index: 100;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        nav ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 35px; list-style: none; }
+        nav a {
+            font-weight: 800; padding: 0.6rem 1.2rem;
+            border-radius: var(--border-radius-small);
+            transition: background var(--transition-speed);
+        }
+        nav a:hover { background: var(--accent-blue); color: white; }
+        .card ul { list-style: none; padding: 0; }
+        .card li {
+            margin-bottom: 0.7rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #eaeaea;
+            padding-bottom: 0.3rem;
+        }
+        .skill-bar { background: #eaeaea; border-radius: 6px; overflow: hidden; height: 10px; margin-left: 1rem; flex: 1; }
+        .skill-level { height: 100%; background: var(--accent-blue); }
+
+        section { padding: 4rem 2rem; }
+        section:nth-child(even) { background: #fff; }
+        h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: var(--primary-dark); position: relative; }
+        h2::after { content: ""; display: block; width: 80px; height: 3px; background: var(--accent-blue); margin: 10px auto 0; border-radius: 2px; }
+
+        .card { background: #fff; border-radius: var(--border-radius-card); padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-light); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .card h3 { color: var(--accent-blue); margin-bottom: 0.8rem; }
+        .job-meta, .education-meta { color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.8rem; }
+
+        .card ul { list-style: none; padding: 0; }
+        .card li { margin-bottom: 0.7rem; display: flex; justify-content: space-between; border-bottom: 1px dashed #eaeaea; padding-bottom: 0.3rem; }
+
+        footer { text-align: center; padding: 2rem; background: var(--primary-dark); color: rgba(255,255,255,0.8); border-top-left-radius: 40px; border-top-right-radius: 40px; }
+
+        @media(max-width:768px){
+            nav ul { flex-direction: column; gap: 10px; }
+            .hero-content { flex-direction: column; }
+            .hero-left h1 { font-size: 2.2rem; }
+            .hero-left p { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header id="hero">
+    <div class="hero-content">
+        <div class="hero-left">
+            <img src="images/t.png" alt="Profilbild Ahmad Alkhalaf" class="profile-pic">
+            <div>
+                <h1>Ahmad Alkhalaf</h1>
+                <p>Wirtschaftsinformatiker | Mobile App Entwickler</p>
+            </div>
+        </div>
+
+        <div class="hero-right">
+
+            <p style="font-size: 0.95rem; line-height: 1.6; color: #f0f4f8;">
+                Ich bin Wirtschaftsinformatiker und Mobile App Entwickler mit Leidenschaft für innovative Softwarelösungen.
+                Während meines Studiums habe ich umfangreiche Erfahrung in der Entwicklung von mobilen Anwendungen, Backend-Systemen und Datenbanken gesammelt.
+                Ich lege großen Wert auf sauberen Code, effiziente Lösungen und Teamarbeit.
+                Meine Motivation ist es, digitale Prozesse zu optimieren und Projekte von der Idee bis zur Umsetzung erfolgreich zu begleiten.
+            </p>
+        </div>
+    </div>
+</header>
+
+
+
+<nav>
+    <ul>
+        <li><a href="#personal">Persönlich</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Erfahrung</a></li>
+        <li><a href="#education">Bildung</a></li>
+        <li><a href="#hobbies">Hobbys</a></li>
+        <li><a href="#tech-tools">Tools & Software</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#about me">About me</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section id="personal-tech" style="padding: 4rem 2rem; background: #f4f7fa;">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
+
+            <!-- Linke Spalte: Persönliche Daten -->
+            <div class="card" style="background: #ffffff; border-left: 5px solid var(--accent-blue);">
+                <h3 style="margin-bottom: 1rem;">Persönliche Daten</h3>
+                <p>👤 <strong>Name:</strong> Ahmad Alkhalaf</p>
+                <p>📅 <strong>Geburtsdatum:</strong> 01.01.1996</p>
+                <p>🌍 <strong>Nationalität:</strong> syrisch / deutsch</p>
+                <p>🏠 <strong>Adresse:</strong> 50674 Köln</p>
+            </div>
+
+
+            <div class="card" style="background: #ffffff; border-left: 5px solid var(--accent-green);">
+                <h3 style="margin-bottom: 1rem;">Technologische Erfahrung während des Studiums</h3>
+                <ul style="list-style: disc inside; line-height: 1.7; color: var(--text-dark);">
+                    <li>Entwicklung von Android & iOS Apps mit Kotlin & Swift</li>
+                    <li>Backend-Entwicklung mit Spring Boot und REST APIs</li>
+                    <li>Datenbankprojekte mit SQL, PL/SQL, NoSQL</li>
+                    <li>Versionierung & Collaboration mit Git & GitHub</li>
+                    <li>DevOps & Containerisierung mit Docker</li>
+                    <li>Prozessmodellierung mit UML & BPMN2</li>
+                    <li>Cloud-Services: Firebase, Dynamics Business Central</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <div class="card">
+                <h3>Kompetenzen</h3>
+                <ul>
+                    <li>Programmierung <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                    <li>Datenbanken <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                    <li>Softwarearchitektur <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                    <li>DevOps <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div></li>
+                    <li>Teamarbeit <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                    <li>Kommunikation <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                    <li>Analytisches Denken <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                    <li>Problemlösung <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                    <li>Lernbereitschaft <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Sprachen</h3>
+                <ul>
+                    <li>Deutsch <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                    <li>Englisch <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div></li>
+                    <li>Arabisch <div class="skill-bar"><div class="skill-level" style="width:100%"></div></div></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <section id="tech-tools">
+        <div class="container">
+            <h2>Tools & Technologien</h2>
+            <div class="card">
+                <h3>Tools & Software</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Microsoft Office</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">IntelliJ IDEA</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Wireshark</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Signavio</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Oracle SQL Developer</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">DataGrip</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Firebase</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">GitHub</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">XCode</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Android Studio</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Dynamics Business Central</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Slack</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Trello</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Spring Boot</span>
+                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Docker</span>
+                </div>
+
+                <h3 style="margin-top:1.5rem;">Programmiersprachen</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Java</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Kotlin</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Swift</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">AL/C</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">UML</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">BPMN2</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">SQL</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">PL/SQL</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">NoSQL</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">C</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">C++</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Angular</span>
+                    <span style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Erfahrung -->
+    <section id="experience">
+        <div class="container">
+            <h2>Berufserfahrung</h2>
+            <div class="card">
+                <h3>Teaching Assistant Mobile App Development</h3>
+                <p class="job-meta">05.2024 – heute | Syntax Institut, Berlin</p>
+                <ul>
+                    <li>Betreuung von Studierenden in Kotlin und Swift</li>
+                    <li>Unterstützung bei Projekten im Mobile Development</li>
+                    <li>Erstellung und Korrektur von Übungs- & Prüfungsaufgaben</li>
+                    <li>Durchführung von Code Reviews</li>
+                    <li>Mitgestaltung von Vorlesungen und Übungen</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Werkstudent Mobile App Development Tutor</h3>
+                <p class="job-meta">06.2022 – 05.2024 | Syntax Institut, Berlin</p>
+            </div>
+            <div class="card">
+                <h3>Werkstudent DB & Programmierung</h3>
+                <p class="job-meta">03.2022 – 05.2022 | Trans-o-flex Logistik GmbH, Frechen</p>
+                <ul>
+                    <li>SQL- und PL/SQL-Skripte entwickelt & optimiert</li>
+                    <li>Datenbankmigrationen unterstützt</li>
+                    <li>Analyse und Lösung von Performanceproblemen</li>
+                </ul>
+            </div>
+            <div class="card"><h3>Minijob Paketlieferung</h3><p class="job-meta">11.2020 – 12.2021 | Good Hood GmbH, Berlin</p></div>
+            <div class="card"><h3>Freiberufliche Studienbetreuung</h3><p class="job-meta">01.2019 – 09.2021 | InWIS Bochum</p></div>
+            <div class="card"><h3>Callcenter Agent</h3><p class="job-meta">03.2018 – 10.2018 | Xcat Essen</p></div>
+            <div class="card"><h3>Sozialhelfer & Dolmetscher</h3><p class="job-meta">11.2016 – 02.2018 | St. Antonius-Haus Herten</p></div>
+        </div>
+    </section>
+
+    <section id="about me">
+        <div class="container">
+            <p style="font-size: 1rem; line-height: 1.6; color: #0b3967;">
+
+                Ich bin Wirtschaftsinformatiker und Mobile-App-Entwickler mit umfangreicher praktischer Erfahrung in der Konzeption und Entwicklung mobiler Anwendungen. Während meiner Tätigkeit als Teaching Assistant und Werkstudent konnte ich tiefgehende Kenntnisse in der Entwicklung von Android- und iOS-Apps mit Kotlin und Swift erwerben und Studierende in Projekten betreuen, wodurch ich meine Fähigkeiten in der Projektkoordination, Code-Reviews und technischen Unterstützung weiter ausbauen konnte.
+                Parallel dazu habe ich im Rahmen meines Studiums sowie meiner Bachelorarbeit praxisnahe Erfahrungen in der Backend-Entwicklung mit Spring Boot, in der Frontend-Entwicklung mit Angular sowie in der Arbeit mit relationalen und NoSQL-Datenbanken (SQL, PL/SQL, MongoDB) gesammelt. Darüber hinaus habe ich umfassende Kenntnisse in der Modellierung von Softwareprozessen mit UML und BPMN2, der Containerisierung von Anwendungen mit Docker sowie der Nutzung von Cloud-Services wie Firebase und Dynamics Business Central erworben.
+                Meine Arbeitsweise zeichnet sich durch sauberen, wartbaren Code, effiziente Lösungsansätze und eine analytische Herangehensweise aus. Ich lege großen Wert auf Teamarbeit, kontinuierliches Lernen und die erfolgreiche Umsetzung von Projekten von der Idee bis zur produktiven Anwendung. Neben der technischen Expertise bringe ich Engagement, Kreativität und die Fähigkeit mit, komplexe Anforderungen in praxisgerechte Lösungen zu übersetzen.
+            </p>
+        </div>
+    </section>
+    <section id="education">
+        <div class="container">
+            <h2>Bildung</h2>
+            <div class="card"><h3>B.Sc. Wirtschaftsinformatik</h3><p class="education-meta">09.2019 – 08.2025 | TH Köln</p></div>
+            <div class="card"><h3>B.Sc. Informationstechnik</h3><p class="education-meta">09.2018 – 08.2019 | Ruhr-Universität Bochum</p></div>
+            <div class="card"><h3>TestDaF Sprachkurs C1</h3><p class="education-meta">10.2016 – 07.2017 | DAF-Haus Bochum</p></div>
+            <div class="card"><h3>Abitur & Schulbildung</h3><p class="education-meta">2000 – 2014 | Maysaloun Gymnasium, Daraa (Syrien)</p></div>
+            <div class="card"><h3>Ehrenamt</h3><p class="education-meta">02.2021 – 09.2021 | Studentischer Wahlausschuss, TH Köln</p></div>
+        </div>
+    </section>
+
+
+    <section id="hobbies">
+        <div class="container">
+            <h2>Hobbys</h2>
+            <div class="card">
+                <ul>
+                    <li>Sport</li>
+                    <li>Reisen</li>
+                    <li>Surfen</li>
+                    <li>Lesen & Weiterbildung</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="card">
+                <p><strong>Email:</strong> <a href="mailto:ahmadalkhalaf75@gmail.com">ahmadalkhalaf75@gmail.com</a></p>
+                <p><strong>Telefon:</strong> <a href="tel:+491733618048">+49 173 3618048</a></p>
+                <p><strong>Adresse:</strong>  50674 Köln</p>
+                <div class="contact-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    &copy; 2025 Ahmad Alkhalaf – Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>
