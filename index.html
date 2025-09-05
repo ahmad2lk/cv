@@ -13,7 +13,7 @@
         --primary-dark: #1F2D3D;
         --primary-light: #2C3E50;
         --accent-blue: #3498db;
-        --accent-green: #2ecc71;
+        --accent-green: #0b3967;
         --bg-light: #f8f9fa;
         --text-dark: #2c3f55;
         --text-light: #5f7a94;
@@ -321,8 +321,6 @@
             font-size: 1.1rem;
         }
     }
-
-
     .tag {
         display: flex;
         align-items: center;
@@ -330,28 +328,24 @@
         padding: 5px 10px;
         border-radius: 8px;
         background: #e0f0ff;
-        animation: float 4s ease-in-out infinite;
+        animation: float 3s ease-in-out infinite;
     }
 
     .tag:nth-child(odd) {
-        animation-duration: 3.5s;
-        animation-delay: 0s;
+        animation-duration: 2.5s;
     }
 
     .tag:nth-child(even) {
-        animation-duration: 4.5s;
-        animation-delay: 1s;
+        animation-duration: 3.5s;
     }
 
     @keyframes float {
-        0%   { transform: translate(0, 0) rotate(0deg); }
-        20%  { transform: translate(5px, -5px) rotate(-2deg); }
-        40%  { transform: translate(-5px, 5px) rotate(2deg); }
-        60%  { transform: translate(5px, 5px) rotate(-1deg); }
-        80%  { transform: translate(-5px, -5px) rotate(1deg); }
-        100% { transform: translate(0, 0) rotate(0deg); }
+        0%   { transform: translate(0, 0); }
+        25%  { transform: translate(3px, -3px); }
+        50%  { transform: translate(0, -6px); }
+        75%  { transform: translate(-3px, -3px); }
+        100% { transform: translate(0, 0); }
     }
-
     </style>
 </head>
 <body>
@@ -375,9 +369,9 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#info">Hobbies</a></li>
         <li><a href="#tech-tools">Tools & Software</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#info">Contact</a></li>
         <li><a href="#about me">About Me</a></li>
     </ul>
 </nav>
@@ -678,27 +672,26 @@
             </div>
         </div>
     </section>
-    <section id="hobbies">
-        <div class="container"><h2>Hobbies</h2>
-            <div class="card">
-                <ul>
-                    <li>Sport</li>
-                    <li>Reisen</li>
-                    <li>Boxen</li>
-                    <li>BJJ</li>
-                    <li>Ringen</li>
-                    <li> CrossFit</li>
-                    <li>Surfen</li>
-                    <li>Lesen & Weiterbildung</li>
+    <section id="info">
+        <div class="container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <!-- Hobbies Card -->
+            <div class="card" style="flex: 1 1 300px;">
+                <h2>Hobbies</h2>
+                <ul style="display: flex; flex-wrap: wrap; gap: 10px; padding:0; list-style:none;">
+                    <li class="tag">Sport</li>
+                    <li class="tag">Reisen</li>
+                    <li class="tag">Boxen</li>
+                    <li class="tag">BJJ</li>
+                    <li class="tag">Ringen</li>
+                    <li class="tag">CrossFit</li>
+                    <li class="tag">Surfen</li>
+                    <li class="tag">Lesen & Weiterbildung</li>
                 </ul>
             </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="card">
+
+            <div class="card" style="flex: 1 1 300px;">
+                <h2>Contact</h2>
                 <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ahmadalkhalaf75@gmail.com">ahmadalkhalaf75@gmail.com</a></p>
                 <p><i class="fa-solid fa-phone"></i> <strong>Telefon:</strong> <a href="tel:+491733618048">+49 173 3618048</a></p>
                 <p><i class="fa-solid fa-location-dot"></i> <strong>Adresse:</strong> 50674 Köln</p>
@@ -709,6 +702,8 @@
             </div>
         </div>
     </section>
+
+
 
 
 
