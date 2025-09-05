@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ahmad Alkhalaf  </title>
+    <meta name="description" content="Lebenslauf von Ahmad Alkhalaf – Wirtschaftsinformatiker & Mobile App Entwickler." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1F2D3D;
+            --primary-light: #2C3E50;
+            --accent-blue: #3498db;
+            --accent-green: #2ecc71;
+            --bg-light: #f8f9fa;
+            --text-dark: #2c3f55;
+            --text-light: #5f7a94;
+            --border-radius-card: 18px;
+            --border-radius-small: 8px;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition-speed: 0.3s ease-in-out;
+        }
+
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.7; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+        a { color: var(--accent-blue); text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: var(--accent-green); }
+
+
+        header#hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+            color: white;
+            padding: 4rem 2rem;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .hero-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .profile-pic {
+            width: 160px; height: 160px;
+            border-radius: 50%; border: 6px solid #fff;
+            object-fit: cover;
+            box-shadow: var(--shadow-light);
+        }
+        .hero-left h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
+        .hero-left p { font-size: 1.2rem; color: #d0dce6; }
+
+        .hero-right {
+            flex: 1;
+            min-width: 280px;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-card);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        nav {
+            position: sticky; top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(60px);
+            padding: 0.8rem 0;
+            z-index: 100;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        nav ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 35px; list-style: none; }
+        nav a {
+            font-weight: 800; padding: 0.6rem 1.2rem;
+            border-radius: var(--border-radius-small);
+            transition: background var(--transition-speed);
+        }
+        nav a:hover { background: var(--accent-blue); color: white; }
+        .card ul { list-style: none; padding: 0; }
+        .card li {
+            margin-bottom: 0.7rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #eaeaea;
+            padding-bottom: 0.3rem;
+        }
+        .skill-bar { background: #eaeaea; border-radius: 6px; overflow: hidden; height: 10px; margin-left: 1rem; flex: 1; }
+        .skill-level { height: 100%; background: var(--accent-blue); }
+
+        section { padding: 4rem 2rem; }
+        section:nth-child(even) { background: #fff; }
+        h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: var(--primary-dark); position: relative; }
+        h2::after { content: ""; display: block; width: 80px; height: 3px; background: var(--accent-blue); margin: 10px auto 0; border-radius: 2px; }
+
+        .card { background: #fff; border-radius: var(--border-radius-card); padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-light); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .card h3 { color: var(--accent-blue); margin-bottom: 0.8rem; }
+        .job-meta, .education-meta { color: var(--text-light); font-size: 0.95rem; margin-bottom: 0.8rem; }
+
+        .card ul { list-style: none; padding: 0; }
+        .card li { margin-bottom: 0.7rem; display: flex; justify-content: space-between; border-bottom: 1px dashed #eaeaea; padding-bottom: 0.3rem; }
+
+        footer { text-align: center; padding: 2rem; background: var(--primary-dark); color: rgba(255,255,255,0.8); border-top-left-radius: 40px; border-top-right-radius: 40px; }
+
+        @media(max-width:768px){
+            nav ul { flex-direction: column; gap: 10px; }
+            .hero-content { flex-direction: column; }
+            .hero-left h1 { font-size: 2.2rem; }
+            .hero-left p { font-size: 1.1rem; }
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><button onclick="switchLang('de')">Deutsch</button></li>
+            <li><button onclick="switchLang('en')">English</button></li>
+            <li><button onclick="switchLang('ar')"> عربي</button></li>
+        </ul>
+    </nav>
+</head>
+<body>
+<header id="hero">
+    <div class="hero-content">
+        <div class="hero-left">
+            <img src="images/tt.png" alt="Profilbild Ahmad Alkhalaf" class="profile-pic">
+
+            <!-- Deutsch -->
+            <div class="lang de">
+                <h1>Ahmad Alkhalaf</h1>
+                <p>Wirtschaftsinformatiker | Mobile App Entwickler</p>
+            </div>
+
+            <!-- English -->
+            <div class="lang en" style="display:none;">
+                <h1>Ahmad Alkhalaf</h1>
+                <p>Business Informatics Specialist | Mobile App Developer</p>
+            </div>
+
+            <!-- Arabisch -->
+            <div class="lang ar" style="display:none; direction:rtl; text-align:right;">
+                <h1>أحمد الخلف</h1>
+                <p>أخصائي نظم معلومات إدارية | مطور تطبيقات موبايل</p>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <!-- Deutsch -->
+            <p class="lang de" style="font-size:0.95rem; line-height:1.6; color:#f0f4f8;">
+                Ich bin Wirtschaftsinformatiker und Mobile App Entwickler mit Leidenschaft für innovative Softwarelösungen.
+                Während meines Studiums habe ich umfangreiche Erfahrung in der Entwicklung von mobilen Anwendungen, Backend-Systemen und Datenbanken gesammelt.
+                Ich lege großen Wert auf sauberen Code, effiziente Lösungen und Teamarbeit.
+                Meine Motivation ist es, digitale Prozesse zu optimieren und Projekte von der Idee bis zur Umsetzung erfolgreich zu begleiten.
+            </p>
+
+            <!-- English -->
+            <p class="lang en" style="display:none; font-size:0.95rem; line-height:1.6; color:#f0f4f8;">
+                I am a Business Informatics specialist and Mobile App Developer with a passion for innovative software solutions.
+                During my studies, I gained extensive experience in developing mobile applications, backend systems, and databases.
+                I highly value clean code, efficient solutions, and teamwork.
+                My motivation is to optimize digital processes and successfully manage projects from idea to implementation.
+            </p>
+
+            <!-- Arabisch -->
+            <p class="lang ar" style="display:none; direction:rtl; text-align:right; font-size:0.95rem; line-height:1.6; color:#f0f4f8;">
+                أنا أخصائي نظم معلومات إدارية ومطور تطبيقات موبايل شغوف بالحلول البرمجية المبتكرة.
+                خلال دراستي اكتسبت خبرة واسعة في تطوير تطبيقات الهواتف، أنظمة الباك إند وقواعد البيانات.
+                أحرص على كتابة كود نظيف وتقديم حلول فعالة والعمل بروح الفريق.
+                دوافعي هي تحسين العمليات الرقمية ومرافقة المشاريع من الفكرة حتى التنفيذ الناجح.
+            </p>
+        </div>
+    </div>
+</header>
+
+
+
+<nav>
+    <!-- Deutsch -->
+    <ul class="lang de">
+        <li><a href="#personal">Persönlich</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Erfahrung</a></li>
+        <li><a href="#education">Bildung</a></li>
+        <li><a href="#hobbies">Hobbys</a></li>
+        <li><a href="#tech-tools">Tools & Software</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#about me">Über mich</a></li>
+    </ul>
+
+    <!-- English -->
+    <ul class="lang en" style="display:none;">
+        <li><a href="#personal">Personal</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#tech-tools">Tools & Software</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about me">About me</a></li>
+    </ul>
+
+    <!-- Arabisch -->
+    <ul class="lang ar" style="display:none; direction:rtl; text-align:right;">
+        <li><a href="#personal">الشخصية</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#experience">الخبرة</a></li>
+        <li><a href="#education">التعليم</a></li>
+        <li><a href="#hobbies">الهوايات</a></li>
+        <li><a href="#tech-tools">الأدوات والبرمجيات</a></li>
+        <li><a href="#contact">الاتصال</a></li>
+        <li><a href="#about me">من أنا</a></li>
+    </ul>
+</nav>
+
+
+<main>
+
+
+    <main>
+
+        <!-- Persönliche Daten & Technologische Erfahrung -->
+        <section id="personal-tech">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
+
+                <!-- Deutsch -->
+                <div class="card lang de">
+                    <h3>Persönliche Daten</h3>
+                    <p>👤 <strong>Name:</strong> Ahmad Alkhalaf</p>
+                    <p>📅 <strong>Geburtsdatum:</strong> 01.01.1996</p>
+                    <p>🌍 <strong>Nationalität:</strong> syrisch / deutsch</p>
+                    <p>🏠 <strong>Adresse:</strong> 50674 Köln</p>
+                </div>
+                <div class="card lang de">
+                    <h3>Technologische Erfahrung während des Studiums</h3>
+                    <ul>
+                        <li>Entwicklung von Android & iOS Apps mit Kotlin & Swift</li>
+                        <li>Backend-Entwicklung mit Spring Boot und REST APIs</li>
+                        <li>Datenbankprojekte mit SQL, PL/SQL, NoSQL</li>
+                        <li>Versionierung & Collaboration mit Git & GitHub</li>
+                        <li>DevOps & Containerisierung mit Docker</li>
+                        <li>Prozessmodellierung mit UML & BPMN2</li>
+                        <li>Cloud-Services: Firebase, Dynamics Business Central</li>
+                    </ul>
+                </div>
+
+                <!-- Englisch -->
+                <div class="card lang en" style="display:none;">
+                    <h3>Personal Information</h3>
+                    <p>👤 <strong>Name:</strong> Ahmad Alkhalaf</p>
+                    <p>📅 <strong>Date of Birth:</strong> 01.01.1996</p>
+                    <p>🌍 <strong>Nationality:</strong> Syrian / German</p>
+                    <p>🏠 <strong>Address:</strong> 50674 Cologne</p>
+                </div>
+                <div class="card lang en" style="display:none;">
+                    <h3>Technological Experience During Studies</h3>
+                    <ul>
+                        <li>Development of Android & iOS Apps with Kotlin & Swift</li>
+                        <li>Backend development with Spring Boot and REST APIs</li>
+                        <li>Database projects with SQL, PL/SQL, NoSQL</li>
+                        <li>Versioning & collaboration with Git & GitHub</li>
+                        <li>DevOps & containerization with Docker</li>
+                        <li>Process modeling with UML & BPMN2</li>
+                        <li>Cloud services: Firebase, Dynamics Business Central</li>
+                    </ul>
+                </div>
+
+                <!-- Arabisch -->
+                <div class="card lang ar" style="display:none; direction:rtl; text-align:right;">
+                    <h3>المعلومات الشخصية</h3>
+                    <p>👤 <strong>الاسم:</strong> أحمد الخلاف</p>
+                    <p>📅 <strong>تاريخ الميلاد:</strong> 01.01.1996</p>
+                    <p>🌍 <strong>الجنسية:</strong> سوري / ألماني</p>
+                    <p>🏠 <strong>العنوان:</strong> 50674 كولونيا</p>
+                </div>
+                <div class="card lang ar" style="display:none; direction:rtl; text-align:right;">
+                    <h3>الخبرة التكنولوجية خلال الدراسة</h3>
+                    <ul>
+                        <li>تطوير تطبيقات Android & iOS باستخدام Kotlin & Swift</li>
+                        <li>تطوير Backend باستخدام Spring Boot و REST APIs</li>
+                        <li>مشاريع قواعد البيانات باستخدام SQL, PL/SQL, NoSQL</li>
+                        <li>إدارة الإصدارات والتعاون باستخدام Git & GitHub</li>
+                        <li>DevOps وحاويات التطبيقات باستخدام Docker</li>
+                        <li>نمذجة العمليات باستخدام UML & BPMN2</li>
+                        <li>خدمات السحابة: Firebase, Dynamics Business Central</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <div class="container">
+                <!-- Deutsch -->
+                <div class="card lang de">
+                    <h3>Kompetenzen</h3>
+                    <ul>
+                        <li>Programmierung <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                        <li>Datenbanken <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                        <li>Softwarearchitektur <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                        <li>DevOps <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div></li>
+                        <li>Teamarbeit <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                        <li>Kommunikation <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                        <li>Analytisches Denken <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                        <li>Problemlösung <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                        <li>Lernbereitschaft <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                    </ul>
+                </div>
+                <div class="card lang de">
+                    <h3>Sprachen</h3>
+                    <ul>
+                        <li>Deutsch <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                        <li>Englisch <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div></li>
+                        <li>Arabisch <div class="skill-bar"><div class="skill-level" style="width:100%"></div></div></li>
+                    </ul>
+                </div>
+
+                <!-- Englisch -->
+                <div class="card lang en" style="display:none;">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Programming <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                        <li>Databases <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                        <li>Software Architecture <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                        <li>DevOps <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div></li>
+                        <li>Teamwork <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                        <li>Communication <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                        <li>Analytical Thinking <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                        <li>Problem Solving <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                        <li>Willingness to Learn <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                    </ul>
+                </div>
+                <div class="card lang en" style="display:none;">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>German <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                        <li>English <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div></li>
+                        <li>Arabic <div class="skill-bar"><div class="skill-level" style="width:100%"></div></div></li>
+                    </ul>
+                </div>
+
+                <!-- Arabisch -->
+                <div class="card lang ar" style="display:none; direction:rtl; text-align:right;">
+                    <h3>المهارات</h3>
+                    <ul>
+                        <li>البرمجة <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                        <li>قواعد البيانات <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                        <li>هندسة البرمجيات <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                        <li>DevOps <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div></li>
+                        <li>العمل الجماعي <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                        <li>التواصل <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></li>
+                        <li>التفكير التحليلي <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></li>
+                        <li>حل المشكلات <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></li>
+                        <li>الرغبة في التعلم <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                    </ul>
+                </div>
+                <div class="card lang ar" style="display:none; direction:rtl; text-align:right;">
+                    <h3>اللغات</h3>
+                    <ul>
+                        <li>الألمانية <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div></li>
+                        <li>الإنجليزية <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div></li>
+                        <li>العربية <div class="skill-bar"><div class="skill-level" style="width:100%"></div></div></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section id="tech-tools">
+            <div class="container">
+
+                <!-- Überschrift -->
+                <h2 class="lang de">Tools & Technologien</h2>
+                <h2 class="lang en" style="display:none;">Tools & Technologies</h2>
+                <h2 class="lang ar" style="display:none; direction:rtl; text-align:right;">الأدوات والتقنيات</h2>
+
+                <div class="card">
+
+                    <!-- Tools & Software -->
+                    <h3 class="lang de">Tools & Software</h3>
+                    <h3 class="lang en" style="display:none;">Tools & Software</h3>
+                    <h3 class="lang ar" style="display:none; direction:rtl; text-align:right;">الأدوات والبرامج</h3>
+
+                    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                        <span>Microsoft Office</span>
+                        <span>IntelliJ IDEA</span>
+                        <span>Wireshark</span>
+                        <span>Signavio</span>
+                        <span>Oracle SQL Developer</span>
+                        <span>DataGrip</span>
+                        <span>Firebase</span>
+                        <span>GitHub</span>
+                        <span>XCode</span>
+                        <span>Android Studio</span>
+                        <span>Dynamics Business Central</span>
+                        <span>Slack</span>
+                        <span>Trello</span>
+                        <span>Spring Boot</span>
+                        <span>Docker</span>
+                    </div>
+
+                    <!-- Programmiersprachen -->
+                    <h3 class="lang de" style="margin-top:1.5rem;">Programmiersprachen</h3>
+                    <h3 class="lang en" style="display:none; margin-top:1.5rem;">Programming Languages</h3>
+                    <h3 class="lang ar" style="display:none; direction:rtl; text-align:right; margin-top:1.5rem;">لغات البرمجة</h3>
+
+                    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                        <span>Java</span>
+                        <span>Kotlin</span>
+                        <span>Swift</span>
+                        <span>AL/C</span>
+                        <span>UML</span>
+                        <span>BPMN2</span>
+                        <span>SQL</span>
+                        <span>PL/SQL</span>
+                        <span>NoSQL</span>
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>Angular</span>
+                        <span>Python</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="experience">
+            <div class="container">
+
+                <h2 class="lang de">Berufserfahrung</h2>
+                <h2 class="lang en" style="display:none;">Work Experience</h2>
+                <h2 class="lang ar" style="display:none; direction:rtl; text-align:right;">الخبرة العملية</h2>
+
+                <div class="card lang de">
+                    <h3>Teaching Assistant Mobile App Development</h3>
+                    <p class="job-meta">05.2024 – heute | Syntax Institut, Berlin</p>
+                    <ul>
+                        <li>Betreuung von Studierenden in Kotlin und Swift</li>
+                        <li>Unterstützung bei Projekten im Mobile Development</li>
+                        <li>Erstellung und Korrektur von Übungs- & Prüfungsaufgaben</li>
+                        <li>Durchführung von Code Reviews</li>
+                        <li>Mitgestaltung von Vorlesungen und Übungen</li>
+                    </ul>
+                </div>
+
+                <div class="card lang en" style="display:none;">
+                    <h3>Teaching Assistant Mobile App Development</h3>
+                    <p class="job-meta">05.2024 – Present | Syntax Institute, Berlin</p>
+                    <ul>
+                        <li>Supervision of students in Kotlin and Swift</li>
+                        <li>Support in mobile development projects</li>
+                        <li>Creation and correction of exercises & exam tasks</li>
+                        <li>Conducting code reviews</li>
+                        <li>Assisting in lectures and exercises</li>
+                    </ul>
+                </div>
+
+                <div class="card lang ar" style="display:none; direction:rtl; text-align:right;">
+                    <h3>مساعد تدريس تطوير تطبيقات الهواتف</h3>
+                    <p class="job-meta">05.2024 – الآن | معهد سينتاكس، برلين</p>
+                    <ul>
+                        <li>إشراف على الطلاب في Kotlin و Swift</li>
+                        <li>دعم المشاريع في تطوير التطبيقات</li>
+                        <li>إنشاء وتصحيح التمارين والاختبارات</li>
+                        <li>إجراء مراجعات الكود</li>
+                        <li>المساهمة في المحاضرات والتمارين</li>
+                    </ul>
+                </div>
+
+                <!-- Weitere Jobs: Deutsch, Englisch, Arabisch analog -->
+
+            </div>
+        </section>
+        <!-- Erfahrung -->
+
+
+        <section id="about me">
+            <div class="container">
+                <p class="lang de" style="font-size:1rem; line-height:1.6; color:#0b3967;">
+                    Ich bin Wirtschaftsinformatiker und Mobile-App-Entwickler mit Erfahrung in der Konzeption und Entwicklung mobiler Anwendungen. Während meiner Tätigkeit als Teaching Assistant und Werkstudent konnte ich tiefgehende Kenntnisse in der Entwicklung von Android- und iOS-Apps mit Kotlin und Swift erwerben und Studierende in Projekten betreuen, wodurch ich meine Fähigkeiten in der Projektkoordination, Code-Reviews und technischen Unterstützung weiter ausbauen konnte.
+                    Parallel dazu habe ich im Rahmen meines Studiums sowie meiner Bachelorarbeit praxisnahe Erfahrungen in der Backend-Entwicklung mit Spring Boot, in der Frontend-Entwicklung mit Angular sowie in der Arbeit mit relationalen und NoSQL-Datenbanken (SQL, PL/SQL, MongoDB) gesammelt. Darüber hinaus habe ich umfassende Kenntnisse in der Modellierung von Softwareprozessen mit UML und BPMN2, der Containerisierung von Anwendungen mit Docker sowie der Nutzung von Cloud-Services wie Firebase und Dynamics Business Central erworben.
+                    Meine Arbeitsweise zeichnet sich durch sauberen, wartbaren Code, effiziente Lösungsansätze und eine analytische Herangehensweise aus. Ich lege großen Wert auf Teamarbeit, kontinuierliches Lernen und die erfolgreiche Umsetzung von Projekten von der Idee bis zur produktiven Anwendung. Neben der technischen Expertise bringe ich Engagement, Kreativität und die Fähigkeit mit, komplexe Anforderungen in praxisgerechte Lösungen zu übersetzen.
+                </p>
+                <p class="lang en" style="display:none; font-size:1rem; line-height:1.6; color:#0b3967;">
+                    I am a Business Informatics specialist and mobile app developer with experience in designing and developing mobile applications. As a Teaching Assistant and working student, I gained deep knowledge in developing Android and iOS apps using Kotlin and Swift, and I supported students in projects, enhancing my skills in project coordination, code reviews, and technical assistance.
+                    Additionally, during my studies and bachelor thesis, I acquired practical experience in backend development with Spring Boot, frontend development with Angular, and working with relational and NoSQL databases (SQL, PL/SQL, MongoDB). I also gained extensive experience in modeling software processes with UML and BPMN2, containerizing applications with Docker, and using cloud services such as Firebase and Dynamics Business Central.
+                    My work style is characterized by clean, maintainable code, efficient solutions, and an analytical approach. I value teamwork, continuous learning, and successfully guiding projects from concept to production. Alongside technical expertise, I bring commitment, creativity, and the ability to translate complex requirements into practical solutions.
+                </p>
+                <p class="lang ar" style="display:none; direction:rtl; text-align:right; font-size:1rem; line-height:1.6; color:#0b3967;">
+                    أنا متخصص في نظم المعلومات التجارية ومطور تطبيقات الهواتف الذكية، ولدي خبرة في تصميم وتطوير التطبيقات المحمولة. خلال عملي كمساعد تدريس وموظف جزئي، اكتسبت معرفة عميقة في تطوير تطبيقات Android و iOS باستخدام Kotlin و Swift، ودعمت الطلاب في المشاريع، مما عزز مهاراتي في تنسيق المشاريع، ومراجعة الكود، والدعم الفني.
+                    بالإضافة إلى ذلك، خلال دراستي وأطروحة البكالوريوس، اكتسبت خبرة عملية في تطوير الواجهة الخلفية باستخدام Spring Boot، وتطوير الواجهة الأمامية باستخدام Angular، والعمل مع قواعد البيانات العلائقية وغير العلائقية (SQL، PL/SQL، MongoDB). كما اكتسبت خبرة واسعة في نمذجة عمليات البرمجيات باستخدام UML و BPMN2، وحاويات التطبيقات باستخدام Docker، واستخدام خدمات السحابة مثل Firebase و Dynamics Business Central.
+                    يتميز أسلوبي في العمل بالكود النظيف والقابل للصيانة، والحلول الفعالة، والمنهج التحليلي. أقدر العمل الجماعي والتعلم المستمر، وتحقيق نجاح المشاريع من الفكرة إلى الإنتاج. بجانب الخبرة التقنية، أتمتع بالالتزام والإبداع والقدرة على تحويل المتطلبات المعقدة إلى حلول عملية.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bildung / Education -->
+        <section id="education">
+            <div class="container">
+                <h2 class="lang de">Bildung</h2>
+                <h2 class="lang en" style="display:none;">Education</h2>
+                <h2 class="lang ar" style="display:none; direction:rtl; text-align:right;">التعليم</h2>
+
+                <div class="card">
+                    <h3 class="lang de">B.Sc. Wirtschaftsinformatik</h3>
+                    <h3 class="lang en" style="display:none;">B.Sc. Business Informatics</h3>
+                    <h3 class="lang ar" style="display:none; direction:rtl; text-align:right;">بكالوريوس نظم المعلومات التجارية</h3>
+                    <p class="education-meta">09.2019 – 08.2025 | TH Köln</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="lang de">B.Sc. Informationstechnik</h3>
+                    <h3 class="lang en" style="display:none;">B.Sc. Information Technology</h3>
+                    <h3 class="lang ar" style="display:none; direction:rtl; text-align:right;">بكالوريوس تقنية المعلومات</h3>
+                    <p class="education-meta">09.2018 – 08.2019 | Ruhr-Universität Bochum</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="lang de">TestDaF Sprachkurs C1</h3>
+                    <h3 class="lang en" style="display:none;">TestDaF Language Course C1</h3>
+                    <h3 class="lang ar" style="display:none; direction:rtl; text-align:right;">دورة لغة TestDaF C1</h3>
+                    <p class="education-meta">10.2016 – 07.2017 | DAF-Haus Bochum</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="lang de">Abitur & Schulbildung</h3>
+                    <h3 class="lang en" style="display:none;">High School & Secondary Education</h3>
+                    <h3 class="lang ar" style="display:none; direction:rtl; text-align:right;">الثانوية العامة والتعليم المدرسي</h3>
+                    <p class="education-meta">2000 – 2014 | Maysaloun Gymnasium, Daraa (Syrien)</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="lang de">Ehrenamt</h3>
+                    <h3 class="lang en" style="display:none;">Volunteering</h3>
+                    <h3 class="lang ar" style="display:none; direction:rtl; text-align:right;">التطوع</h3>
+                    <p class="education-meta">02.2021 – 09.2021 | Studentischer Wahlausschuss, TH Köln</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Hobbys -->
+        <section id="hobbies">
+            <div class="container">
+                <h2 class="lang de">Hobbys</h2>
+                <h2 class="lang en" style="display:none;">Hobbies</h2>
+                <h2 class="lang ar" style="display:none; direction:rtl; text-align:right;">الهوايات</h2>
+
+                <div class="card">
+                    <ul class="lang de">
+                        <li>Sport</li>
+                        <li>Reisen</li>
+                        <li>Surfen</li>
+                        <li>Lesen & Weiterbildung</li>
+                    </ul>
+                    <ul class="lang en" style="display:none;">
+                        <li>Sports</li>
+                        <li>Travel</li>
+                        <li>Surfing</li>
+                        <li>Reading & Learning</li>
+                    </ul>
+                    <ul class="lang ar" style="display:none; direction:rtl; text-align:right;">
+                        <li>رياضة</li>
+                        <li>السفر</li>
+                        <li>ركوب الأمواج</li>
+                        <li>القراءة والتعلم المستمر</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt / Contact -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="lang de">Kontakt</h2>
+                <h2 class="lang en" style="display:none;">Contact</h2>
+                <h2 class="lang ar" style="display:none; direction:rtl; text-align:right;">الاتصال</h2>
+
+                <div class="card">
+                    <p class="lang de"><strong>Email:</strong> <a href="mailto:ahmadalkhalaf75@gmail.com">ahmadalkhalaf75@gmail.com</a></p>
+                    <p class="lang en" style="display:none;"><strong>Email:</strong> <a href="mailto:ahmadalkhalaf75@gmail.com">ahmadalkhalaf75@gmail.com</a></p>
+                    <p class="lang ar" style="display:none; direction:rtl; text-align:right;"><strong>البريد الإلكتروني:</strong> <a href="mailto:ahmadalkhalaf75@gmail.com">ahmadalkhalaf75@gmail.com</a></p>
+
+                    <p class="lang de"><strong>Telefon:</strong> <a href="tel:+491733618048">+49 173 3618048</a></p>
+                    <p class="lang en" style="display:none;"><strong>Phone:</strong> <a href="tel:+491733618048">+49 173 3618048</a></p>
+                    <p class="lang ar" style="display:none; direction:rtl; text-align:right;"><strong>الهاتف:</strong> <a href="tel:+491733618048">+49 173 3618048</a></p>
+
+                    <p class="lang de"><strong>Adresse:</strong> 50674 Köln</p>
+                    <p class="lang en" style="display:none;"><strong>Address:</strong> 50674 Cologne</p>
+                    <p class="lang ar" style="display:none; direction:rtl; text-align:right;"><strong>العنوان:</strong> 50674 كولونيا</p>
+
+                    <div class="contact-links lang de">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                    <div class="contact-links lang en" style="display:none;">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                    <div class="contact-links lang ar" style="display:none; direction:rtl; text-align:right;">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            function switchLang(lang) {
+                document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+            }
+        </script>
+
+    </main>
+    <footer>
+        &copy; 2025 Ahmad Alkhalaf – Alle Rechte vorbehalten.
+    </footer>
+
+
+</body>
+</html>
