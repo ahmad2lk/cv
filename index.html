@@ -6,8 +6,9 @@
     <title>Ahmad Alkhalaf </title>
     <meta name="description"
           content="Lebenslauf von Ahmad Alkhalaf – Wirtschaftsinformatiker & Mobile App Entwickler."/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap"
-          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <style> :root {
         --primary-dark: #1F2D3D;
         --primary-light: #2C3E50;
@@ -236,6 +237,7 @@
         background: #fff;
     }
 
+
     h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
@@ -318,7 +320,39 @@
         .hero-left p {
             font-size: 1.1rem;
         }
-    } </style>
+    }
+
+
+    .tag {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 10px;
+        border-radius: 8px;
+        background: #e0f0ff;
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .tag:nth-child(odd) {
+        animation-duration: 3.5s;
+        animation-delay: 0s;
+    }
+
+    .tag:nth-child(even) {
+        animation-duration: 4.5s;
+        animation-delay: 1s;
+    }
+
+    @keyframes float {
+        0%   { transform: translate(0, 0) rotate(0deg); }
+        20%  { transform: translate(5px, -5px) rotate(-2deg); }
+        40%  { transform: translate(-5px, 5px) rotate(2deg); }
+        60%  { transform: translate(5px, 5px) rotate(-1deg); }
+        80%  { transform: translate(-5px, -5px) rotate(1deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+    </style>
 </head>
 <body>
 <header id="hero">
@@ -443,42 +477,115 @@
         </div>
     </section>
     <section id="tech-tools">
-        <div class="container"><h2>Tools & Technologien</h2>
-            <div class="card"><h3>Tools & Software</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px;"><span
-                        style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Microsoft Office</span> <span
-                        style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">IntelliJ IDEA</span> <span
-                        style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Wireshark</span> <span
-                        style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Signavio</span> <span
-                        style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Oracle SQL Developer</span>
-                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">DataGrip</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Firebase</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">GitHub</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">XCode</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Android Studio</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Dynamics Business Central</span>
-                    <span style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Slack</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Trello</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Spring Boot</span> <span
-                            style="background:#e0f0ff; padding:5px 10px; border-radius:8px;">Docker</span></div>
+        <div class="container">
+            <h2>Tools & Technologien</h2>
+            <div class="card">
+                <h3>Tools & Software</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-file-lines"></i> Microsoft Office
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-java"></i> IntelliJ IDEA
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-network-wired"></i> Wireshark
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-diagram-project"></i> Signavio
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-database"></i> Oracle SQL Developer
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-database"></i> DataGrip
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-google"></i> Firebase
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-apple"></i> XCode
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-android"></i> Android Studio
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-building"></i> Dynamics Business Central
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-slack"></i> Slack
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-clipboard-list"></i> Trello
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-java"></i> Spring Boot
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-docker"></i> Docker
+                </span>
+                </div>
+
                 <h3 style="margin-top:1.5rem;">Programmiersprachen</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px;"><span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Java</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Kotlin</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Swift</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">AL/C</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">UML</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">BPMN2</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">SQL</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">PL/SQL</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">NoSQL</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">C</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">C++</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Angular</span> <span
-                        style="background:#e0ffe0; padding:5px 10px; border-radius:8px;">Python</span></div>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-java"></i> Java
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-kotlin"></i> Kotlin
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-apple"></i> Swift
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-code"></i> AL/C
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-diagram-project"></i> UML
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-diagram-project"></i> BPMN2
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-database"></i> SQL
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-database"></i> PL/SQL
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-database"></i> NoSQL
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-code"></i> C
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-solid fa-code"></i> C++
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-angular"></i> Angular
+                </span>
+                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <i class="fa-brands fa-python"></i> Python
+                </span>
+                </div>
             </div>
         </div>
     </section>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tags = document.querySelectorAll("#tech-tools .tag");
+            tags.forEach((tag, index) => {
+                tag.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
     <section id="experience">
         <div class="container"><h2>Experience</h2>
             <div class="timeline">
@@ -589,15 +696,23 @@
     </section>
 
     <section id="contact">
-        <div class="container"><h2>Contact</h2>
-            <div class="card"><p><strong>Email:</strong> <a href="mailto:ahmadalkhalaf75@gmail.com">ahmadalkhalaf75@gmail.com</a>
-            </p>
-                <p><strong>Telefon:</strong> <a href="tel:+491733618048">+49 173 3618048</a></p>
-                <p><strong>Adresse:</strong> 50674 Köln</p>
-                <div class="contact-links"><a href="#">LinkedIn</a> <a href="#">GitHub</a></div>
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="card">
+                <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ahmadalkhalaf75@gmail.com">ahmadalkhalaf75@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <strong>Telefon:</strong> <a href="tel:+491733618048">+49 173 3618048</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> <strong>Adresse:</strong> 50674 Köln</p>
+                <div class="contact-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
             </div>
         </div>
     </section>
+
+
+
+
 </main>
 <footer> &copy; 2025 Ahmad Alkhalaf <br> 📧 <a href="mailto:ahmadalkhalaf75@gmail.com" style="color: #3498db;">Schreib
     mir eine E-Mail</a></footer>
