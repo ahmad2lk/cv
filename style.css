@@ -1,15 +1,15 @@
 :root {
-    --primary-dark: #1F2D3D;
-    --primary-light: #2C3E50;
-    --accent-blue: #3498db;
-    --accent-green: #0b3967;
-    --bg-light: #f8f9fa;
-    --text-dark: #2c3f55;
-    --text-light: #5f7a94;
+    --primary-dark: #e0e0e0;
+    --primary-light: #f5f5f5;
+    --accent-blue: #4da6ff;
+    --accent-green: #90d4ff;
+    --bg-light: #121212;
+    --text-dark: #f8f8f8;
+    --text-light: #b0b0b0;
     --border-radius-card: 18px;
     --border-radius-small: 8px;
-    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --shadow-light: 0 4px 15px rgba(255, 255, 255, 0.08);
+    --shadow-hover: 0 10px 30px rgba(255, 255, 255, 0.15);
     --transition-speed: 0.3s ease-in-out;
 }
 
@@ -47,8 +47,8 @@ a:hover {
 }
 
 header#hero {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
-    color: white;
+    background: linear-gradient(135deg, #121212, #1f1f1f);
+    color: var(--text-dark);
     padding: 4rem 2rem;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -78,7 +78,7 @@ header#hero {
     min-width: 280px;
     padding: 1.5rem;
     border-radius: var(--border-radius-card);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
 }
 
@@ -110,13 +110,13 @@ header#hero {
     width: 18px;
     height: 18px;
     background: var(--accent-green);
-    border: 3px solid white;
+    border: 3px solid #1e1e1e;
     border-radius: 50%;
     box-shadow: 0 0 0 3px var(--accent-blue);
 }
 
 .timeline-content {
-    background: #fff;
+    background: #2c2c2c;
     padding: 1.2rem;
     border-radius: var(--border-radius-card);
     box-shadow: var(--shadow-light);
@@ -154,21 +154,22 @@ header#hero {
 .hero-left h1 {
     font-size: 2.5rem;
     margin-bottom: 0.3rem;
+    color: var(--primary-dark);
 }
 
 .hero-left p {
     font-size: 1.2rem;
-    color: #d0dce6;
+    color: var(--text-light);
 }
 
 nav {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(18, 18, 18, 0.9);
     backdrop-filter: blur(60px);
     padding: 0.8rem 0;
     z-index: 100;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
 }
 
 nav ul {
@@ -184,15 +185,16 @@ nav a {
     padding: 0.6rem 1.2rem;
     border-radius: var(--border-radius-small);
     transition: background var(--transition-speed);
+    color: var(--text-dark);
 }
 
 nav a:hover {
     background: var(--accent-blue);
-    color: white;
+    color: #fff;
 }
 
 .card {
-    background: #fff;
+    background: #1e1e1e;
     border-radius: var(--border-radius-card);
     padding: 2rem;
     margin-bottom: 2rem;
@@ -219,7 +221,7 @@ nav a:hover {
     margin-bottom: 0.7rem;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed #eaeaea;
+    border-bottom: 1px dashed #333;
     padding-bottom: 0.3rem;
 }
 
@@ -230,7 +232,7 @@ nav a:hover {
 }
 
 .skill-bar {
-    background: #eaeaea;
+    background: #444;
     border-radius: 6px;
     overflow: hidden;
     height: 10px;
@@ -248,14 +250,18 @@ section {
 }
 
 section:nth-child(even) {
-    background: #fff;
+    background: #121212;
+}
+
+section:nth-child(odd) {
+    background: #1e1e1e;
 }
 
 h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: var(--primary-dark);
+    color: var(--text-dark);
     position: relative;
 }
 
@@ -272,8 +278,8 @@ h2::after {
 footer {
     text-align: center;
     padding: 2rem;
-    background: var(--primary-dark);
-    color: rgb(224, 240, 255);
+    background: #1f1f1f;
+    color: #b0b0b0;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
@@ -284,7 +290,8 @@ footer {
     gap: 6px;
     padding: 5px 10px;
     border-radius: 8px;
-    background: #e0f0ff;
+    background: #333;
+    color: var(--text-dark);
     animation: float 3s ease-in-out infinite;
 }
 
@@ -326,7 +333,6 @@ html {
         font-size: 1.1rem;
     }
 
-    /* Disable animations for mobile to improve performance */
     .timeline-item,
     .timeline-item:nth-child(even) {
         transform: translateX(0);

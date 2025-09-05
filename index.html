@@ -10,7 +10,54 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        /* This is a temporary, in-page style block to ensure dark mode works as expected with your existing inline styles. */
+        :root {
+            --primary-dark: #e0e0e0;
+            --primary-light: #f5f5f5;
+            --accent-blue: #4da6ff;
+            --accent-green: #90d4ff;
+            --bg-light: #121212;
+            --text-dark: #f8f8f8;
+            --text-light: #b0b0b0;
+            --border-radius-card: 18px;
+            --border-radius-small: 8px;
+            --shadow-light: 0 4px 15px rgba(255, 255, 255, 0.08);
+            --shadow-hover: 0 10px 30px rgba(255, 255, 255, 0.15);
+            --transition-speed: 0.3s ease-in-out;
+        }
 
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header#hero {
+            background: linear-gradient(135deg, #121212, #1f1f1f);
+            color: var(--text-dark);
+        }
+
+        .hero-right p {
+            color: var(--text-light) !important;
+        }
+
+        nav {
+            background: rgba(18, 18, 18, 0.9);
+            box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+        }
+
+        nav a {
+            color: var(--text-dark);
+        }
+
+        section:nth-child(even) {
+            background: #1e1e1e;
+        }
+
+        section:nth-child(odd) {
+            background: #121212;
+        }
+    </style>
 </head>
 <body>
 <header id="hero">
@@ -19,7 +66,7 @@
             <div><h1>Ahmad Alkhalaf</h1>
                 <p>Wirtschaftsinformatiker | Mobile App Developer | Software Developer</p></div>
         </div>
-        <div class="hero-right"><p style="font-size: 0.95rem; line-height: 1.6; color: #e0f0ff;"> Ich bin
+        <div class="hero-right"><p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light);"> Ich bin
             Wirtschaftsinformatiker und Mobile App Entwickler mit Leidenschaft für innovative Softwarelösungen. Während
             meines Studiums habe ich umfangreiche Erfahrung in der Entwicklung von mobilen Anwendungen, Backend-Systemen
             und Datenbanken gesammelt. Ich lege großen Wert auf sauberen Code, effiziente Lösungen und Teamarbeit. Meine
@@ -40,15 +87,15 @@
     </ul>
 </nav>
 <main>
-    <section id="personal" style="padding: 4rem 2rem; background: #f4f7fa;">
+    <section id="personal" style="padding: 4rem 2rem; background: #1e1e1e;">
         <div class="container" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
-            <div class="card" style="background: #ffffff; border-left: 5px solid var(--accent-blue);"><h3
+            <div class="card" style="background: #2c2c2c; border-left: 5px solid var(--accent-blue);"><h3
                     style="margin-bottom: 1rem;">Persönliche Daten</h3>
                 <p>👤 <strong>Name:</strong> Ahmad Alkhalaf</p>
                 <p>📅 <strong>Geburtsdatum:</strong> 01.01.1996</p>
                 <p>🌍 <strong>Nationalität:</strong> syrisch / deutsch</p>
                 <p>🏠 <strong>Adresse:</strong> 50674 Köln</p></div>
-            <div class="card" style="background: #ffffff; border-left: 5px solid var(--accent-green);"><h3
+            <div class="card" style="background: #2c2c2c; border-left: 5px solid var(--accent-green);"><h3
                     style="margin-bottom: 1rem;">Technologische Erfahrung während des Studiums</h3>
                 <ul style="list-style: disc inside; line-height: 1.7; color: var(--text-dark);">
                     <li>Entwicklung von Android & iOS Apps mit Kotlin & Swift</li>
@@ -140,92 +187,92 @@
             <div class="card">
                 <h3>Tools & Software</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-file-lines"></i> Microsoft Office
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-java"></i> IntelliJ IDEA
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-network-wired"></i> Wireshark
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-diagram-project"></i> Signavio
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-database"></i> Oracle SQL Developer
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-database"></i> DataGrip
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-google"></i> Firebase
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-github"></i> GitHub
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-apple"></i> XCode
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-android"></i> Android Studio
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-building"></i> Dynamics Business Central
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-slack"></i> Slack
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-clipboard-list"></i> Trello
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-java"></i> Spring Boot
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-docker"></i> Docker
                 </span>
                 </div>
 
                 <h3 style="margin-top:1.5rem;">Programmiersprachen</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-java"></i> Java
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-kotlin"></i> Kotlin
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-apple"></i> Swift
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-code"></i> AL/C
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-diagram-project"></i> UML
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-diagram-project"></i> BPMN2
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-database"></i> SQL
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-database"></i> PL/SQL
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-database"></i> NoSQL
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-code"></i> C
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-solid fa-code"></i> C++
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-angular"></i> Angular
                 </span>
-                    <span class="tag" style="background:#e0f0ff; padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
+                    <span class="tag" style="background:#333; color: var(--text-dark); padding:5px 10px; border-radius:8px; display:flex; align-items:center; gap:6px;">
                     <i class="fa-brands fa-python"></i> Python
                 </span>
                 </div>
@@ -294,7 +341,7 @@
     </section>
     <section id="about me">
         <h2>About Me</h2>
-        <div class="container"><p style="font-size: 1rem; line-height: 1.6; color: #0b3967;"> Ich bin
+        <div class="container"><p style="font-size: 1rem; line-height: 1.6; color: var(--text-light);"> Ich bin
             Wirtschaftsinformatiker und Mobile-App-Entwickler mit Erfahrung in der Konzeption und Entwicklung mobiler
             Anwendungen. Während meiner Tätigkeit als Teaching Assistant und Werkstudent konnte ich tiefgehende
             Kenntnisse in der Entwicklung von Android- und iOS-Apps mit Kotlin und Swift erwerben und Studierende in
@@ -338,18 +385,17 @@
     </section>
     <section id="info">
         <div class="container" style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <!-- Hobbies Card -->
             <div class="card" style="flex: 1 1 300px;">
                 <h2>Hobbies</h2>
                 <ul style="display: flex; flex-wrap: wrap; gap: 10px; padding:0; list-style:none;">
-                    <li class="tag">Sport</li>
-                    <li class="tag">Reisen</li>
-                    <li class="tag">Boxen</li>
-                    <li class="tag">BJJ</li>
-                    <li class="tag">Ringen</li>
-                    <li class="tag">CrossFit</li>
-                    <li class="tag">Surfen</li>
-                    <li class="tag">Lesen & Weiterbildung</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">Sport</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">Reisen</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">Boxen</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">BJJ</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">Ringen</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">CrossFit</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">Surfen</li>
+                    <li class="tag" style="background:#333; color: var(--text-dark);">Lesen & Weiterbildung</li>
                 </ul>
             </div>
 
@@ -375,14 +421,8 @@
 
         </div>
     </section>
-
-
-
-
-
-
 </main>
-<footer> &copy; 2025 Ahmad Alkhalaf <br> 📧 <a href="mailto:ahmadalkhalaf75@gmail.com" style="color: #3498db;">Schreib
+<footer> &copy; 2025 Ahmad Alkhalaf <br> 📧 <a href="mailto:ahmadalkhalaf75@gmail.com" style="color: #4da6ff;">Schreib
     mir eine E-Mail</a></footer>
 </body>
 </html>
