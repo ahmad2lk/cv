@@ -28,6 +28,7 @@ header#hero {
     color: var(--text-light) !important;
 }
 
+
 nav {
     background: rgba(18, 18, 18, 0.9);
     box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
