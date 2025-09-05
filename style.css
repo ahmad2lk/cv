@@ -199,7 +199,7 @@ header#hero {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 6px solid #fff;
+    border: 6px solid #333; /* Angepasst für Dark Mode */
     object-fit: cover;
     box-shadow: var(--shadow-light);
 }
@@ -274,7 +274,7 @@ nav a:hover {
     margin-bottom: 0.7rem;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed #333;
+    border-bottom: 1px dashed #333; /* Angepasst für Dark Mode */
     padding-bottom: 0.3rem;
 }
 
@@ -332,9 +332,13 @@ footer {
     text-align: center;
     padding: 2rem;
     background: #1f1f1f;
-    color: #b0b0b0;
+    color: var(--text-light); /* Angepasst für Dark Mode */
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+}
+
+footer a {
+    color: var(--accent-blue) !important; /* Sichergestellt, dass die Linkfarbe angepasst ist */
 }
 
 .tag {
