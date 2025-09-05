@@ -203,11 +203,9 @@ nav a:hover {
     border-bottom: 1px dashed #eaeaea;
     padding-bottom: 0.3rem;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 .skill-bar {
     background: #eaeaea;
     border-radius: 6px;
@@ -216,6 +214,7 @@ html {
     margin-left: 1rem;
     flex: 1;
 }
+
 
 .skill-level {
     height: 100%;
@@ -326,7 +325,6 @@ footer {
     .container {
         padding: 1.5rem;
     }
-
     nav ul {
         flex-direction: column;
         gap: 10px;
@@ -344,20 +342,6 @@ footer {
     .hero-right {
         min-width: unset;
     }
-    
-    #personal .container,
-    #skills .container,
-    #info .container {
-        display: block;
-    }
-
-    .card {
-        margin-bottom: 1.5rem;
-    }
-    
-    .timeline {
-        padding-left: 15px; /* Reduzierter Abstand, um Platz zu sparen */
-    }
 
     .timeline-item,
     .timeline-item:nth-child(even) {
@@ -369,15 +353,13 @@ footer {
         animation: none;
     }
 
-    .hero-left h1 {
-        font-size: 2rem;
+    #personal .container,
+    #skills .container {
+        display: block;
+        padding-top: 1rem;
     }
-
-    .hero-left p {
-        font-size: 1rem;
-    }
-
-    h2 {
-        font-size: 1.7rem;
+    
+    .card {
+        margin-bottom: 1.5rem;
     }
 }
