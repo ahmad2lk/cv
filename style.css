@@ -1,15 +1,17 @@
 :root {
-    --primary-dark: #e0e0e0;
-    --primary-light: #f5f5f5;
+    /* Farbpalette für das dunkle Thema */
+    --color-background-primary: #0a0a0a; /* Haupt-Hintergrundfarbe */
+    --color-background-secondary: #1c1c1c; /* Sekundäre Hintergründe (Karten) */
+    --color-text-primary: #f8f8f8; /* Helle Schrift für dunkle Hintergründe */
+    --color-text-secondary: #b0b0b0; /* Gedämpfte Schrift für Akzente */
     --accent-blue: #4da6ff;
     --accent-green: #90d4ff;
-    --bg-light: #121212;
-    --text-dark: #f8f8f8;
-    --text-light: #b0b0b0;
+
+    /* Allgemeine Variablen */
     --border-radius-card: 18px;
     --border-radius-small: 8px;
-    --shadow-light: 0 4px 15px rgba(255, 255, 255, 0.08);
-    --shadow-hover: 0 10px 30px rgba(255, 255, 255, 0.15);
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.6);
     --transition-speed: 0.3s ease-in-out;
 }
 
@@ -21,8 +23,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
     line-height: 1.7;
 }
 
@@ -39,7 +41,7 @@ h1, h2, h3 {
 a {
     color: var(--accent-blue);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color var(--transition-speed);
 }
 
 a:hover {
@@ -47,8 +49,8 @@ a:hover {
 }
 
 header#hero {
-    background: linear-gradient(135deg, #121212, #1f1f1f);
-    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--color-background-primary), var(--color-background-secondary));
+    color: var(--color-text-primary);
     padding: 4rem 2rem;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -110,17 +112,17 @@ header#hero {
     width: 18px;
     height: 18px;
     background: var(--accent-green);
-    border: 3px solid #1e1e1e;
+    border: 3px solid var(--color-background-primary);
     border-radius: 50%;
     box-shadow: 0 0 0 3px var(--accent-blue);
 }
 
 .timeline-content {
-    background: #2c2c2c;
+    background: var(--color-background-secondary);
     padding: 1.2rem;
     border-radius: var(--border-radius-card);
     box-shadow: var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .timeline-content:hover {
@@ -146,7 +148,7 @@ header#hero {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 6px solid #333; /* Angepasst für Dark Mode */
+    border: 6px solid var(--color-background-secondary);
     object-fit: cover;
     box-shadow: var(--shadow-light);
 }
@@ -154,12 +156,12 @@ header#hero {
 .hero-left h1 {
     font-size: 2.5rem;
     margin-bottom: 0.3rem;
-    color: var(--primary-dark);
+    color: var(--color-text-primary);
 }
 
 .hero-left p {
     font-size: 1.2rem;
-    color: var(--text-light);
+    color: var(--color-text-secondary);
 }
 
 nav {
@@ -169,7 +171,7 @@ nav {
     backdrop-filter: blur(60px);
     padding: 0.8rem 0;
     z-index: 100;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -185,21 +187,21 @@ nav a {
     padding: 0.6rem 1.2rem;
     border-radius: var(--border-radius-small);
     transition: background var(--transition-speed);
-    color: var(--text-dark);
+    color: var(--color-text-primary);
 }
 
 nav a:hover {
     background: var(--accent-blue);
-    color: #fff;
+    color: var(--color-text-primary);
 }
 
 .card {
-    background: #1e1e1e;
+    background: var(--color-background-secondary);
     border-radius: var(--border-radius-card);
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .card:hover {
@@ -221,18 +223,18 @@ nav a:hover {
     margin-bottom: 0.7rem;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed #333; /* Angepasst für Dark Mode */
+    border-bottom: 1px dashed var(--color-background-secondary);
     padding-bottom: 0.3rem;
 }
 
 .job-meta, .education-meta {
-    color: var(--text-light);
+    color: var(--color-text-secondary);
     font-size: 0.95rem;
     margin-bottom: 0.8rem;
 }
 
 .skill-bar {
-    background: #444;
+    background: var(--color-background-primary);
     border-radius: 6px;
     overflow: hidden;
     height: 10px;
@@ -250,18 +252,18 @@ section {
 }
 
 section:nth-child(even) {
-    background: #121212;
+    background: var(--color-background-primary);
 }
 
 section:nth-child(odd) {
-    background: #1e1e1e;
+    background: var(--color-background-secondary);
 }
 
 h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: var(--text-dark);
+    color: var(--color-text-primary);
     position: relative;
 }
 
@@ -278,14 +280,14 @@ h2::after {
 footer {
     text-align: center;
     padding: 2rem;
-    background: #1f1f1f;
-    color: var(--text-light); /* Angepasst für Dark Mode */
+    background: var(--color-background-primary);
+    color: var(--color-text-secondary);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
 
 footer a {
-    color: var(--accent-blue) !important; /* Sichergestellt, dass die Linkfarbe angepasst ist */
+    color: var(--accent-blue) !important;
 }
 
 .tag {
@@ -294,8 +296,8 @@ footer a {
     gap: 6px;
     padding: 5px 10px;
     border-radius: 8px;
-    background: #333;
-    color: var(--text-dark);
+    background: var(--color-background-secondary);
+    color: var(--color-text-primary);
     animation: float 3s ease-in-out infinite;
 }
 
@@ -320,11 +322,6 @@ html {
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .hero-content {
         flex-direction: column;
     }
@@ -346,17 +343,16 @@ html {
     .tag {
         animation: none;
     }
-}/* Diese Regel stylt die Karte für Persönliche Daten, um den blauen Balken zu erhalten */
+}
+
 .personal-card {
     border-left: 5px solid var(--accent-blue);
 }
 
-/* Diese Regel stylt die Karte für Technologische Erfahrung, um den grünen Balken zu erhalten */
 .experience-card {
     border-left: 5px solid var(--accent-green);
 }
 
-/* Styles für die Sektion, die persönliche Daten und technologische Erfahrung enthält */
 #personal .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -364,47 +360,30 @@ html {
     align-items: start;
 }
 
-/* Allgemeine Styles für die Hobbies und Kontakt-Tags */
-.tag {
-    background: #333;
-    color: var(--text-dark);
-    padding: 5px 10px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* Container für Tags, um sie richtig anzuordnen */
 .tag-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-/* Navigations-Links für Hobbies und Kontakt */
 #hobbies-contact .container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-/* Flex-Basis für Hobbies-Karte */
 .hobbies-card {
     flex: 1 1 300px;
 }
 
-/* Flex-Basis für Kontakt-Karte */
 .contact-card {
     flex: 1 1 300px;
 }
 
-/* Stellt sicher, dass die Fußzeilenlinks die Variable verwenden */
 footer a {
     color: var(--accent-blue) !important;
 }
 
-/* Neue Media Query für die persönliche Sektion auf kleinen Bildschirmen */
 @media (max-width: 768px) {
     #personal .container {
         display: block;
