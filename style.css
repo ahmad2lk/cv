@@ -68,6 +68,18 @@ header#hero {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-right {
+    width: 100%;
+    flex: 1;
+    min-width: 280px;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-card);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
 }
 
 .timeline {
@@ -116,16 +128,13 @@ header#hero {
     box-shadow: var(--shadow-hover);
 }
 
-
 @keyframes fadeInLeft {
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
-@keyframes growLine {
-    to { height: 100%; }
-}
+
 @keyframes fadeInRight {
     to {
         opacity: 1;
@@ -150,15 +159,6 @@ header#hero {
 .hero-left p {
     font-size: 1.2rem;
     color: #d0dce6;
-}
-
-.hero-right {
-    flex: 1;
-    min-width: 280px;
-    padding: 1.5rem;
-    border-radius: var(--border-radius-card);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
 }
 
 nav {
@@ -191,6 +191,25 @@ nav a:hover {
     color: white;
 }
 
+.card {
+    background: #fff;
+    border-radius: var(--border-radius-card);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+    color: var(--accent-blue);
+    margin-bottom: 0.8rem;
+}
+
 .card ul {
     list-style: none;
     padding: 0;
@@ -203,9 +222,13 @@ nav a:hover {
     border-bottom: 1px dashed #eaeaea;
     padding-bottom: 0.3rem;
 }
-html {
-    scroll-behavior: smooth;
+
+.job-meta, .education-meta {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
 }
+
 .skill-bar {
     background: #eaeaea;
     border-radius: 6px;
@@ -228,7 +251,6 @@ section:nth-child(even) {
     background: #fff;
 }
 
-
 h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -245,44 +267,6 @@ h2::after {
     background: var(--accent-blue);
     margin: 10px auto 0;
     border-radius: 2px;
-}
-
-.card {
-    background: #fff;
-    border-radius: var(--border-radius-card);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-.card h3 {
-    color: var(--accent-blue);
-    margin-bottom: 0.8rem;
-}
-
-.job-meta, .education-meta {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    margin-bottom: 0.8rem;
-}
-
-.card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.card li {
-    margin-bottom: 0.7rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px dashed #eaeaea;
-    padding-bottom: 0.3rem;
 }
 
 footer {
@@ -320,6 +304,10 @@ footer {
     100% { transform: translate(0, 0); }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -338,8 +326,9 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* Disable animations for mobile to improve performance and stability */
-    .timeline-item, .timeline-item:nth-child(even) {
+    /* Disable animations for mobile to improve performance */
+    .timeline-item,
+    .timeline-item:nth-child(even) {
         transform: translateX(0);
         animation: none;
     }
