@@ -294,7 +294,9 @@
     </section>
     <section id="about me">
         <h2>About Me</h2>
-        <div class="container"><p style="font-size: 1rem; line-height: 1.6; color: var(--text-light);"> Ich bin
+        <div class="container"><p style="font-size: 1rem; line-height: 1.6; color: var(--text-light);">
+            <p>
+            Ich bin
             Wirtschaftsinformatiker und Mobile-App-Entwickler mit Erfahrung in der Konzeption und Entwicklung mobiler
             Anwendungen. Während meiner Tätigkeit als Teaching Assistant und Werkstudent konnte ich tiefgehende
             Kenntnisse in der Entwicklung von Android- und iOS-Apps mit Kotlin und Swift erwerben und Studierende in
@@ -309,6 +311,8 @@
             Teamarbeit, kontinuierliches Lernen und die erfolgreiche Umsetzung von Projekten von der Idee bis zur
             produktiven Anwendung. Neben der technischen Expertise bringe ich Engagement, Kreativität und die Fähigkeit
             mit, komplexe Anforderungen in praxisgerechte Lösungen zu übersetzen. </p></div>
+        </p>
+        </div>
     </section>
     <section id="education">
         <div class="container"><h2>Education</h2>
@@ -374,6 +378,25 @@
 
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealOnScroll = () => {
+                reveals.forEach((el) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = el.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - 100) {
+                        el.classList.add("active");
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+
 </main>
 <footer> &copy; 2025 Ahmad Alkhalaf <br> 📧 <a href="mailto:ahmadalkhalaf75@gmail.com" style="color: #4da6ff;">Schreib
     mir eine E-Mail</a></footer>
