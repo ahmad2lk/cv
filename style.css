@@ -30,6 +30,7 @@ body {
 
 .container {
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -79,6 +80,7 @@ header#hero {
     gap: 1.5rem;
     flex-direction: column;
     text-align: center;
+    flex: 1;
 }
 
 .hero-right {
@@ -121,6 +123,7 @@ header#hero {
     object-fit: cover;
     box-shadow: var(--shadow-light);
     animation: floatPic 4s ease-in-out infinite;
+    max-width: 100%;
 }
 
 /* ================= NAVIGATION ================= */
@@ -289,7 +292,7 @@ h2::after {
 }
 
 /* ================= ABOUT ME ================= */
-#about\ me {
+#about-me {
     background: #030303;
     border-radius: var(--border-radius-card);
     padding: 2rem;
@@ -300,12 +303,12 @@ h2::after {
     transform: translateY(60px);
 }
 
-#about\ me.active {
+#about-me.active {
     opacity: 0.7;
     transform: translateY(0);
 }
 
-#about\ me:hover {
+#about-me:hover {
     transform: scale(1.03);
     box-shadow: var(--shadow-hover), 0 0 25px rgba(77, 166, 255, 0.3);
 }
@@ -334,6 +337,7 @@ footer a {
     background: #333;
     color: var(--text-dark);
     animation: float 3s ease-in-out infinite;
+    flex-wrap: wrap;
 }
 
 .tag:nth-child(odd) {
@@ -398,7 +402,17 @@ footer a {
     transform: translateY(0);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MEDIA QUERIES ================= */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -411,16 +425,14 @@ footer a {
     }
 
     .hero-left h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        border-right: none; /* Typing Cursor auf Handy entfernen */
+        white-space: normal;
+        animation: none;
     }
 
     .hero-left p {
-        font-size: 1.1rem;
-    }
-
-    .hero-right {
-        width: 100%;
-        margin-top: 1.5rem;
+        font-size: 1rem;
     }
 
     .timeline-item,
@@ -431,22 +443,25 @@ footer a {
 
     .tag {
         animation: none;
+        justify-content: center;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .container {
         padding: 1rem;
     }
 
     .hero-left h1 {
-        font-size: 1.8rem;
-        white-space: normal;
-        border-right: none;
-        animation: none;
+        font-size: 1.5rem;
     }
 
     .hero-left p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
     }
 }
