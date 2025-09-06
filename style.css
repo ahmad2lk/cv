@@ -387,7 +387,6 @@ footer a {
     100% { transform: translate(0, 0); }
 }
 
-
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -399,7 +398,7 @@ footer a {
     transform: translateY(0);
 }
 
-
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -408,6 +407,7 @@ footer a {
 
     .hero-content {
         flex-direction: column;
+        text-align: center;
     }
 
     .hero-left h1 {
@@ -418,6 +418,11 @@ footer a {
         font-size: 1.1rem;
     }
 
+    .hero-right {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
     .timeline-item,
     .timeline-item:nth-child(even) {
         transform: translateX(0);
@@ -426,5 +431,22 @@ footer a {
 
     .tag {
         animation: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .hero-left h1 {
+        font-size: 1.8rem;
+        white-space: normal;
+        border-right: none;
+        animation: none;
+    }
+
+    .hero-left p {
+        font-size: 1rem;
     }
 }
